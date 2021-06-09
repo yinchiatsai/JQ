@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>child-filter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</head>
+
+<style>
+    .box {
+        width: 100px;
+        height: 20px;
+        background-color: grey;
+        margin: 10px;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <span>123</span>
+        <!-- 增加ＳＰＡＮ，長子改變了，box1找不到，不符合條件-->
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+    </div>
+
+    <!-- 既是第一個也是最後一個（first-of-ttype and last-of-type) -->
+    <span>789</span>
+
+
+    <div class="wrap">
+        <!-- 獨生子，沒有兄弟姐妹，任何標籤都算兄弟姐妹 -->
+        <span>000</span>
+    </div>
+
+
+    <script src="./js/jquery-3.6.0.js">
+    </script>
+
+
+    <script>
+        // $('.wrap:first-child').css('background', 'red')
+
+        // $('.box:last-child').css('background', 'red');
+
+        $('span:first-of-type').css('color', 'red');
+        $('span:last-of-type').css('color', 'green');
+
+        // 第幾個小孩，從1開始數
+        // span為第一個小孩，所以ＢＯＸ1為第二個小孩
+        $('.box:nth-child(3)').css('background-color', 'blue');
+        $('.box:nth-last-child(2)').css('background-color', 'yellow');
+
+
+        $('.box:nth-of-type(1)').css('background-color', 'pink');
+
+        // 選取只有一個的，獨生子
+        $('span:only-child').css('color', 'orange')
+        // 唯一一個種類的你
+        $('span:only-of-type').css('color', 'purple')
+    </script>
+</body>
+
+</html>

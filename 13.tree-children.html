@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <ul class="level-1">
+                <li class="item-1">item1</li>
+                <li class="item-2">item2
+                    <ul class="leverl-2">
+                        <li class="item-01">item01</li>
+                        <li class="item-02">item02
+                            <ul class="level-3">
+                                <li class="item-001">item001</li>
+                                <li class="item-002">item002</li>
+                                <li class="item-003">item003</li>
+
+                            </ul>
+
+                        </li>
+                        <li class="item-03">item03</li>
+                    </ul>
+                </li>
+                <li class="item-3">item3</li>
+            </ul>
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="./js/jquery-3.6.0.js">
+    </script>
+
+
+    <script>
+
+        // 不包含孫層，只有一層，可指定
+        // $('.level-1').children('.item-2').css('border', '1px solid #ccc');
+
+        $('.level-1').find('.item-2').css('border', '1px solid #ccc')
+
+
+    </script>
+</body>
+
+</html>

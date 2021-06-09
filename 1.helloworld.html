@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helloworld</title>
+    <style>
+        h1 {
+            color: red;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+        }
+
+        a {
+            text-decoration: none;
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello world</h1>
+
+    <div class="box"></div>
+
+    <a href="#">hello</a>
+
+
+
+
+    <script src="./js/jquery-3.6.0.js">
+    </script>
+    或是ＣＤＮ用法
+
+    <script>
+        //先引用ＪＱ之後，在此ＳＣＲＩＰＴ標籤裡寫才有用
+        //括號裡面要加引號，ＣＳＳ為方法（屬性、顏色）
+        //$(selector)+動作語法
+        $('h1').css('color', 'blue');
+        $('.box').css('background-color', 'red');
+        $('a').css('color', 'blue')
+
+    </script>
+
+
+
+</body>
+
+</html>

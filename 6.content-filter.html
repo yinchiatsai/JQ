@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>content-filter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <div class="names">Jason Kidd</div>
+    <div class="names">LeBron James</div>
+    <div class="names">Jason Williams</div>
+    <div class="names">James Harden</div>
+
+
+
+
+
+
+
+    <script src="./js/jquery-3.6.0.js">
+    </script>
+
+
+    <script>
+        //   所有div標籤裡帶著names class的，filter~
+
+        // 字串規則，我們用單引號或雙引號來代表一個字串
+        // 字串：我們特別指定這一串字給js/jq程式
+
+        // 選擇內容含有James的
+        $("div.names:contains('James')").css("background", "yellow");
+        // 以下錯誤示範。jason變成兩個字串中間的變數
+        // $("div.names:contains("Jason")").css("background", "yellow");
+    </script>
+</body>
+
+</html>
